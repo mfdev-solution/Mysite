@@ -42,15 +42,9 @@ body {
     width: 100%;
     padding: 0;
   }
-  .header{
-    font-size: 20px;
-    width: 100%;
-  }
-  .card{
-    font-size: 15px;
-  }
 }
 </style>
+<title>{{post.title}}</title>
 </head>
 <body>
 
@@ -60,15 +54,12 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    {% for post in posts reversed %}
+
     <div class="card">
-      <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
         <h2>{{post.title}}</h2>
         <h5>{{post.created_at}}</h5>
-        <p>{{post.body|truncatewords:20}}</p>
-      </a>
+        <p>{{post.body}}</p>
     </div>
-   {% endfor %}
   </div>
 </div>
 
